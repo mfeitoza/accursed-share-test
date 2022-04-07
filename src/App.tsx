@@ -19,18 +19,32 @@ function App() {
   ]
   return (
     <div className="container">
-      <Chip name="Trixie" avatar={avatar} />
+      <span style={{marginRight: '20px'}}>
+        <Chip name="Trixie" avatar={avatar} />
+      </span>
+      <span style={{marginRight: '20px'}}>
+        <Chip name="Trixie" />
+      </span>
+      <span style={{marginRight: '20px'}}>
+        <Chip avatar={avatar} />
+      </span>
+
       <br />
       <br />
+
       <div style={{ display: 'flex' }}>
         <div style={{ marginRight: '1rem'}}><Card image={image} title="Lorem ipsum" text="Dui ut ornare lectus sit amet est placerat. Risus nec feugiat in fermentum posuere urna nec. Interdum velit euismod in pellentesque massa placerat duis." /></div>
         <div style={{ marginLeft: '1rem'}}><Card image={image} title="Lorem ipsum" text="Dui ut ornare lectus sit amet est placerat. Risus nec feugiat in fermentum posuere urna nec. Interdum velit euismod in pellentesque massa placerat duis." /></div>
       </div>
+
       <br />
       <br />
+
       <Dropdown name="selectOne" label="Select" options={options} placeholder="Select one option" />
+
       <br />
       <br />
+
       <Tooltip text="Lorem ipsum dollor">
         <div style={{ padding: '20px', background: '#eee' }}>Tincidunt ornare massa eget</div>
       </Tooltip>
