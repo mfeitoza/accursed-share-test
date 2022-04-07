@@ -62,7 +62,7 @@ export default function Dropdown({ name, label = "", placeholder = "", options }
         {options.map(option => <option value={option.value} key={option.value}>{option.label}</option>)}
       </select>
       <div>
-        <Button type="button" onClick={() => open()}><span>{selected ? selected.label : placeholder}</span><ChevronIcon /></Button>
+        <Button type="button" onClick={() => isOpen ? close() : open()}><span>{selected ? selected.label : placeholder}</span><ChevronIcon /></Button>
         <List isOpen={isOpen}>
           {options.map(option => <ListItem onClick={() => setValue(option)} key={option.value}>{option.label}</ListItem>)}
         </List>
